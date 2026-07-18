@@ -5,11 +5,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
- title: 'نظام ابن شالي',
-  description: 'منظومة إدارة الكاشير والمبيعات',
-  icons: {
-    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌴</text></svg>',
-  },
+  title: 'نظام ابن شالي',
+  description: 'منظومة إدارة الكاشير',
 };
 
 export default function RootLayout({
@@ -17,9 +14,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-    return (
+  return (
     <html lang="ar" dir="rtl">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   );
 }
